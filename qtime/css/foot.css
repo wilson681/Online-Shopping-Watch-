@@ -1,0 +1,71 @@
+.main-footer {
+    background-color: #111;
+    color: #f2f2f2;
+    padding: 30px 60px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 15px; /* 🔼 原来是 14px，提升一点可读性 */
+    line-height: 1.6; /* 🔼 增加整体行高 */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* 🔼 增加列之间的间距 */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+    color: #ffffff;
+    font-size: 16px; /* 🔼 小标题稍微放大 */
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 8px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(1000%);
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}

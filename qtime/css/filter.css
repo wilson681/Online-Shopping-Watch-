@@ -1,0 +1,192 @@
+/* ✅ 让 Filter 左移，调整间距 */
+.filter-container {
+    width: 250px;
+    background: transparent; /* ❌ 让 Filter 本身没有背景 */
+    padding: 0; /* ❌ 取消 padding */
+    font-family: Arial, sans-serif;
+    margin-left: -160px; /* ✅ 让 Filter 更贴边 */
+}
+
+/* ✅ 让整个 Filter 看起来更平滑 */
+.filter-section {
+    width: 260px; /* ✅ 稍微缩小，让整体更紧凑 */
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    height: fit-content;
+    margin-right: 15px; /* ✅ 让 Filter 贴边 */
+}
+
+.filter-title {
+    font-size: 18px; /* ✅ 让字体更大，提升可读性 */
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px; /* ✅ 让点击区域更大 */
+    background: #f9f9f9; /* ✅ 让背景更柔和 */
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* ✅ 折叠项（只有展开时有框） */
+.filter-header {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: white;  /* ✅ 让展开项有背景 */
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* ✅ 轻微阴影，让展开项清晰 */
+}
+
+/* ✅ 点击展开时的效果 */
+.filter-section.open .filter-header {
+    background: white;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15); /* ✅ 让展开时更有立体感 */
+}
+
+/* ✅ 默认隐藏折叠内容 */
+.filter-content {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15); /* ✅ 只有展开的内容有边框 */
+}
+
+/* ✅ 让选项更易阅读 */
+.filter-content label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+/* ✅ 颜色过滤器（让颜色点变更明显） */
+.color-option {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* ✅ 变大 */
+    cursor: pointer;
+}
+
+.color-option span {
+    display: inline-block;
+    width: 20px; /* ✅ 颜色点变大 */
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+/* 🌟 滑动容器 */
+.range-slider {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+/* 🌟 滑动轨道（灰色底线） */
+.range-track {
+    position: absolute;
+    height: 6px;
+    background-color: #ddd;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 3px;
+    z-index: 1;
+}
+
+/* 🌟 滑块基础样式 */
+.range-slider input[type=range] {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: none;
+    pointer-events: none; /* 👈 让两个滑块可以重叠控制 */
+    appearance: none;
+    z-index: 2;
+}
+
+/* ✅ 去除默认样式 + 自定义轨道 */
+.range-slider input[type=range]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: none;
+    border: none;
+    border-radius: 3px;
+}
+
+.range-slider input[type=range]::-moz-range-track {
+    height: 6px;
+    background: none;
+    border: none;
+    border-radius: 3px;
+}
+
+/* ✅ 自定义滑块 thumb */
+.range-slider input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all; /* 👈 重新启用控制 */
+    margin-top: -6px;
+}
+
+.range-slider input[type=range]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all;
+    border: none;
+}
+
+/* ✅ 输入框美化 */
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.price-inputs input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    appearance: textfield;
+}
+
+.price-inputs input:focus {
+    border-color: black;
+}
+
+/* ✅ 移除箭头按钮 (for Chrome) */
+.price-inputs input::-webkit-outer-spin-button,
+.price-inputs input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+

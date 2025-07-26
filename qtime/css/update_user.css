@@ -1,0 +1,52 @@
+.notification-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; 
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+}
+
+.notification-popup.error {
+    background-color: #f44336; 
+}
+
+.notification-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+.success-popup, .error-popup {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.success-popup {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.error-popup {
+    background-color: #f39c12;
+    color: white;
+}
+
+.show-popup {
+    opacity: 1 !important;
+    visibility: visible !important;
+}

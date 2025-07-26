@@ -1,0 +1,275 @@
+/* 🌟 让页面整体居中，视觉更舒适 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f8;
+    margin: 0;
+    padding: 0;
+}
+
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 保证 footer 贴底 */
+}
+
+/* 🌟 注册框居中 + 增加底部空隙 */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 85%;
+    background: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin: 100px auto 80px auto; /* ✅ 自动居中 + 底部留空 */
+}
+
+/* 🌟 让左侧图片部分的框架变成白色，并提高位置 */
+.register-image {
+    flex: 1.5; /* ✅ 让图片部分更大 */
+    min-width: 400px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(0, 0%, 100%, 0.873); /* ✅ 改成白色背景 */
+    padding: 15px;
+    position: relative;
+    top: -180px; /* ✅ 提高图片位置 */
+    height: 1100px;
+}
+
+.register-image img {
+    width: 100%;
+    height: 80%; /* ✅ 让图片填充整个框架 */
+    object-fit: cover;
+    border-radius: 10px; /* ✅ 让图片有更自然的边角 */
+}
+
+/* 🌟 让表单更宽 */
+.register-container {
+    flex: 2;
+    padding: 40px;
+    max-width: 650px;
+    text-align: center;
+}
+
+/* 🌟 标题样式 */
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* 🌟 分区框架，调整和图片对齐 */
+.section-box {
+    border: 2px solid #007bff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    text-align: left;
+}
+
+/* 🌟 分区标题优化 */
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* 🌟 让表单和图片对齐 */
+.section-box:first-child {
+    margin-top: -30px; /* ✅ 让 "Your Personal Details" 和图片齐平 */
+}
+
+/* 🌟 输入框布局优化 */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* 🌟 红色 * 号（必填项） */
+.form-group label span {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 3px; /* ✅ 让 * 号不会紧贴文字 */
+}
+
+/* 🌟 调整输入框大小，确保紧凑但不拥挤 */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* 🌟 让输入框更有交互感 */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* 🌟 复选框和文字对齐 */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+.checkbox-group a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+/* 🌟 调整提交按钮，使其不拉长 */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+/* 🌟 让密码输入框和眼睛按钮更清晰 */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-right: 40px; /* 预留空间给眼睛按钮 */
+}
+
+/* 🌟 让眼睛按钮更大 */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px; /* ✅ 让按钮变大 */
+    cursor: pointer;
+    color: #aaa; /* 默认颜色 */
+    transition: color 0.3s ease; /* 颜色变化动画 */
+}
+
+/* 🌟 当密码可见时，眼睛变深色 */
+.toggle-password.active {
+    color: #000; /* ✅ 变黑色，表示密码可见 */
+}
+
+/* ✅ 美观弹窗样式（加大尺寸，优化布局） */
+.custom-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px; /* ✅ 增加内边距 */
+    border-radius: 12px; /* ✅ 让边角更柔和 */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* ✅ 让阴影更深，更立体 */
+    z-index: 1000;
+    text-align: center;
+    width: 450px; /* ✅ 增加宽度，让文本不会太拥挤 */
+    min-height: 200px; /* ✅ 让高度变长，使内容更居中 */
+    display: none; /* 默认隐藏 */
+}
+
+/* ✅ 让标题更突出 */
+.custom-popup h3 {
+    font-size: 24px; /* ✅ 变大 */
+    font-weight: bold; /* ✅ 加粗 */
+    margin-bottom: 15px;
+    color: #d90429; /* ✅ 更深的红色，让错误信息醒目 */
+}
+
+/* ✅ 让内容更清晰 */
+.custom-popup p {
+    font-size: 18px; /* ✅ 变大 */
+    color: #111010;
+    line-height: 1.6; /* ✅ 增加行距，避免内容看起来太紧凑 */
+}
+
+/* ✅ 让按钮在下方对齐 */
+.popup-btn-container {
+    margin-top: 20px;
+}
+
+/* ✅ 让按钮更大，更易点击 */
+.popup-btn {
+    background: black;
+    color: white;
+    padding: 12px 25px; /* ✅ 让按钮更大 */
+    font-size: 18px; /* ✅ 变大 */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.popup-btn:hover {
+    background: #333;
+}
+
+/* ✅ 背景半透明遮罩 */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}

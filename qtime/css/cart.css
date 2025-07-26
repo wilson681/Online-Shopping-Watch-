@@ -1,0 +1,150 @@
+/* ✅ 页面基础布局 */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.page-container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px 40px 20px;
+    box-sizing: border-box;
+}
+
+/* ✅ 页面最大内容宽度加大 */
+.cart-page {
+    width: 100%;
+    max-width: 1200px; /* ✅ 更宽更大 */
+}
+
+/* ✅ 整体购物区域（更实、更强、更大气） */
+.cart-page .cart-section {
+    background-color: #ffffff; /* ✅ 改为纯白，不要灰蒙 */
+    padding: 50px 40px;         /* ✅ 左右更大块 */
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid #bbb;     /* ✅ 加深边框颜色 */
+    margin-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ✅ 标题样式 */
+.cart-page .cart-section h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+/* ✅ 单个商品结构 */
+.cart-page .cart-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid #ddd;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ✅ 商品图片 */
+.cart-page .cart-item-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ✅ 商品信息 */
+.cart-page .cart-item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-page .cart-item-name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.cart-page .cart-item-price {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.cart-page .cart-item-stock {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.cart-page .cart-item-subtotal {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+/* ✅ 数量输入框 */
+.cart-page .cart-qty-input {
+    width: 64px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ✅ Remove 按钮 - 正式风格 */
+.cart-page .remove-btn {
+    background-color: #e60023;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.cart-page .remove-btn:hover {
+    background-color: #c2001f;
+}
+
+/* ✅ 总价 */
+.cart-page .cart-total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* ✅ Checkout 区域 */
+.cart-page .cart-footer-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.cart-page .checkout-btn {
+    padding: 12px 28px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-page .checkout-btn:hover {
+    background-color: #333;
+}

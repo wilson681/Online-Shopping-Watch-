@@ -1,0 +1,165 @@
+
+* {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+
+  .edit-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  .header-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .profile-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  .profile-image-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+  }
+  .edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .edit-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  #createUserForm {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;         
+    margin-bottom: 20px;      
+  }
+
+  .form-group {
+    flex: 1 1 48%;
+    margin-right: 10px;       
+    margin-bottom: 1px;       
+  }
+  .edit-btn, .submitButton{
+    width: 100%;
+    padding: 12px;        
+    font-weight: bold;        
+    border: none;    
+    border-radius: 6px;      
+    cursor: pointer;          
+    transition: background-color 0.3s, transform 0.3s; 
+    text-align: center;   
+    font-size: 15px; 
+    display: block;          
+    margin-bottom: 5px;      
+    margin-top: 2px;         
+  }
+
+  .exit-btn{
+   width: auto;
+   min-width: 0;     
+   padding: 12px;
+   font-weight: bold;       
+    border: none;             
+    border-radius: 6px;    
+    cursor: pointer;    
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;      
+    font-size: 15px;          
+    display: block;           
+    margin-bottom: 5px;      
+    margin-top: 2px;      
+  }
+  .cancelButton{
+    width: 100%;
+    min-width: 0;    
+    padding: 12px;
+    font-weight: bold;       
+     border: none;            
+     border-radius: 6px;       
+     cursor: pointer;     
+     transition: background-color 0.3s, transform 0.3s; 
+     text-align: center;     
+     font-size: 15px;         
+     display: block;           
+     margin-bottom: 5px;  
+     margin-top: 2px;          
+   }
+  
+  .edit-btn, .submitButton{
+    background-color: #80cbc4;
+    color: white;            
+  }
+  .edit-btn:hover , .submitButton:hover{
+    background-color: rgb(64, 255, 0); 
+    transform: translateY(-2px);       
+  }
+
+  .exit-btn , .cancelButton{
+    background-color: #ef5350; 
+    color: white;             
+    text-decoration: none;   
+  }
+
+  .exit-btn:hover , .cancelButton:hover{
+    background-color: rgb(255, 0, 0);  
+    transform: translateY(-2px);     
+  }
+
+  .success-popup, .error-popup {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .success-popup {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .error-popup {
+    background-color: #f39c12;
+    color: white;
+  }
+  .show-popup {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  

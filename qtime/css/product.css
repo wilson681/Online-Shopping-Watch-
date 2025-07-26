@@ -1,0 +1,172 @@
+/* 🌟 让整个页面填满屏幕 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-container {
+    flex: 1;
+    display: flex;
+    width: 90%;
+    max-width: 1300px;
+    margin: 100px auto 50px auto;
+    gap: 30px;
+}
+
+/* ✅ **左侧过滤栏（Filter）优化** */
+.filter-section {
+    width: 250px; /* ✅ 控制宽度 */
+    padding: 0; /* ❌ 取消 padding 让它更贴边 */
+    background: transparent; /* ❌ 取消背景 */
+    box-shadow: none; /* ❌ 取消阴影，避免层叠 */
+    border-radius: 0; /* ❌ 取消边框圆角 */
+    height: fit-content; /* ✅ 让 Filter 高度自适应 */
+    margin-right: 10px; /* ✅ 让 Filter 贴边 */
+}
+
+/* ✅ **产品列表** */
+.product-list {
+    flex: 1; /* ✅ 占满剩余空间 */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ✅ 4 列布局 */
+    margin-left: 20px;
+    gap: 20px; /* ✅ 间距 */
+    justify-content: center;
+    padding: 20px;
+     
+}
+
+/* ✅ **产品卡片**（加大尺寸 + 浅灰背景） */
+.product-item {
+    background: #f5f5f5;  /* ✅ 设置浅灰色背景 */
+    border-radius: 12px;   /* ✅ 让边角更柔和 */
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* ✅ 阴影加深，提升立体感 */
+    text-align: center;
+    padding: 15px;  /* ✅ 增加内边距，让内容更宽松 */
+    width: 250px;  /* ✅ 加大整体尺寸 */
+    height: 350px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* ✅ **悬停时提升立体感** */
+.product-item:hover {
+    transform: translateY(-5px); /* ✅ 上浮 */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* ✅ 悬停时阴影加深 */
+}
+
+/* ✅ **产品图片样式** */
+.product-image img {
+    width: 100%; /* ✅ 让图片填满容器 */
+    height: auto;
+    max-height: 220px; /* ✅ 限制最大高度 */
+    object-fit: cover; /* ✅ 让图片不变形 */
+    border-radius: 10px;
+}
+
+/* ✅ **产品标题** */
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* ✅ **产品描述** */
+.product-item p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* ✅ **价格** */
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+
+.product-link {
+    text-decoration: none; /* 去掉下划线 */
+    color: inherit;         /* 保持文字原来的颜色 */
+    display: block;         /* 让整个区域都可点击 */
+}
+
+
+
+
+✅ 分页按钮包裹层 */
+.pagination-wrapper {
+    margin-top: auto;            /* ✅ 让它自动贴底 */
+    padding-bottom: 40px;        /* ✅ 保留底部空隙 */
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ✅ 分页按钮本身 */
+.pagination {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination button {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s;
+    background-color: white;
+    cursor: pointer;
+}
+
+.pagination a.active,
+.pagination button.active {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.pagination button {
+    font: inherit;
+    appearance: none;
+    border: none;
+}
+
+
+.pagination-spacer {
+    height: 20px;  /* ✅ 可自由调节，撑开空间 */
+}
+
+.product-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* ✅ 改成上对齐 */
+    height: 100%;                 /* ✅ 撑满高度 */
+    position: relative;
+}
+
+.ajax-product-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 700px;
+}

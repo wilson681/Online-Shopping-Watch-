@@ -1,0 +1,226 @@
+/* ✅ 让整个页面居中 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* ✅ 主容器负责撑高页面，footer 自动贴底 */
+.page-container {
+    min-height: calc(100vh - 120px); /* 100vh 减 footer 预留高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 📌 登录框整体布局 */
+.login-wrapper {
+    display: flex;
+    width: 60%;
+    background: rgb(255, 249, 249);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 100px auto 50px auto;
+}
+
+/* 📸 左侧图片区域 */
+.login-image {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f8f8;
+}
+
+.login-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 🔐 右侧登录区域 */
+.login-container {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 🏷 标题 */
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 📝 输入框样式 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 👁 密码框，确保长度与 email 一致 */
+.password-wrapper {
+    position: relative;
+    width: 95%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* 让 password 输入框留出空间 */
+}
+
+/* 👁 眼睛按钮 */
+.toggle-password {
+    position: absolute;
+    right: -50px; /* ✅ 往右调整 */
+    top: 50%;  /* ✅ 居中对齐输入框 */
+    transform: translateY(-50%); /* ✅ 让眼睛按钮刚好居中 */
+    cursor: pointer;
+    font-size: 30px; /* ✅ 让眼睛更大一点 */
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+
+.toggle-password:hover,
+.toggle-password.active {
+    color: black; /* ✅ 变深色，增加视觉反馈 */
+}
+
+/* 🔘 登录按钮 */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.login-btn:hover {
+    background-color: #333;
+}
+
+/* 🔗 忘记密码 */
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;  /* ✅ 往下移动一格 */
+    margin-right: -25px; /* ✅ 往右移动一些 */
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* 🔄 注册链接 */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* 🎨 弹窗（Modal）美化 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 90%;
+    transform: scale(0.8);
+    animation: scaleUp 0.3s forwards;
+}
+
+.modal-content h3 {
+    color: #d9534f;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+    background: #c9302c;
+}
+
+/* 🔥 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+
