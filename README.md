@@ -6,6 +6,6 @@ This project are be created by Kim Seng and Me
 
 U need to install xampp and import database for the qtime.sql file to run
 
-open xampp -> localhost/qtime
+open xampp -> start Apache and MySQL -> import qtime.sql -> open browser-> enter localhost/qtime
 
 
